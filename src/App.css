@@ -1,0 +1,11 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styling dasar global untuk body */
+body {
+  /* Gunakan variabel CSS yang dihasilkan Tailwind */
+  background-color: var(--tw-dark-background);
+  color: var(--tw-text-light);
+}
