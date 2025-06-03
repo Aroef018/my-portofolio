@@ -1,7 +1,18 @@
 // src/components/ProjectDetailModal.tsx
 import React, { useEffect, useRef } from "react";
 
-// ... (interface dan props) ...
+// --- PERBAIKAN: Definisi interface ProjectDetailModalProps harus ADA di sini ---
+interface ProjectDetailModalProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+  githubUrl: string;
+  liveUrl?: string;
+  technologies: string[];
+  onClose: () => void;
+  isOpen: boolean; // Untuk kontrol animasi
+}
+// --- AKHIR PERBAIKAN: Definisi interface ---
 
 const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
   title,
@@ -23,10 +34,12 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
       if (isOpen) {
         // Saat modal seharusnya terbuka: atur opasitas/skala untuk transisi masuk
         modalRef.current.classList.remove("opacity-0", "scale-95", "hidden");
+        // Tambahkan 'block' untuk memastikan elemen ditampilkan
         modalRef.current.classList.add("opacity-90", "scale-100", "block");
         modalRef.current.focus();
       } else {
         // Saat modal seharusnya tertutup: atur opasitas/skala untuk transisi keluar
+        // Pastikan 'block' dihapus agar transisi berjalan
         modalRef.current.classList.remove("opacity-90", "scale-100", "block");
         modalRef.current.classList.add("opacity-0", "scale-95");
         // Setelah transisi keluar, sembunyikan sepenuhnya dari DOM
@@ -103,7 +116,8 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             Technologies Used:
           </h4>
           <div className="flex flex-wrap gap-2">
-            {technologies.map((tech, index) => (
+            {/* --- PERBAIKAN: Berikan tipe eksplisit pada parameter map --- */}
+            {technologies.map((tech: string, index: number) => (
               <span
                 key={index}
                 className="bg-primary-orange/20 text-primary-orange text-sm font-semibold px-3 py-1 rounded-full"

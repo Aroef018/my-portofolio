@@ -1,6 +1,6 @@
 // src/components/HeroSection.tsx
 import React from "react";
-// import profilePic from "../assets/profile.jpg"; // Pastikan path ini benar ke gambar Anda
+import profilePic from "../assets/profile.png"; // Pastikan path ini benar ke gambar Anda
 
 const HeroSection: React.FC = () => {
   return (
@@ -11,17 +11,20 @@ const HeroSection: React.FC = () => {
       {/* Background overlay (opsional, bisa diganti dengan gambar background) */}
       <div className="absolute inset-0 bg-gradient-to-br from-dark-background to-primary-orange/20 opacity-70"></div>
       <div className="relative z-10 flex flex-col items-center">
-        {/* <img
+        <img
           src={profilePic}
           alt="Profile Picture"
           className="w-40 h-40 rounded-full object-cover border-4 border-primary-orange shadow-lg mb-6"
-        /> */}
+        />
         <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-4">
           Hello, I'm <span className="text-primary-orange">Amar Ma'ruf</span>.
         </h1>
         <p className="text-xl md:text-2xl text-text-light mb-8">
-          A <span className="text-primary-orange">Fullstack Developer</span>{" "}
-          building modern applications.
+          Passionate about{" "}
+          <span className="text-primary-orange">
+            solving problems through code
+          </span>{" "}
+          and building innovative applications.
         </p>
         {/* <div className="flex space-x-4">
           <a

@@ -7,35 +7,35 @@ import AboutSection from "./components/AboutSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ExperienceSection from "./components/ExperienceSection";
-// import ContactSection from "./components/ContactSection";
+// import ContactSection from "./components/ContactSection"; // Ini masih dikomentari, biarkan saja
 import Footer from "./components/Footer";
 import AwardsSection from "./components/AwardsSection";
 
-// Komponen helper untuk smooth scrolling
-const ScrollToSection: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    const targetId = e.currentTarget.href.split("#")[1];
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  // Kloning children untuk menambahkan onClick event handler
-  return React.Children.map(children, (child) => {
-    if (
-      React.isValidElement(child) &&
-      typeof child.type === "string" &&
-      child.type === "a"
-    ) {
-      return React.cloneElement(child, { onClick: handleScroll });
-    }
-    return child;
-  });
-};
+// --- HAPUS SELURUH BLOK KOMPONEN SCROLLTOSECTION DARI SINI ---
+// const ScrollToSection: React.FC<{ children: React.ReactNode }> = ({
+//   children,
+// }) => {
+//   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+//     e.preventDefault();
+//     const targetId = e.currentTarget.href.split("#")[1];
+//     const targetElement = document.getElementById(targetId);
+//     if (targetElement) {
+//       targetElement.scrollIntoView({ behavior: "smooth" });
+//     }
+//   };
+//
+//   return React.Children.map(children, (child) => {
+//     if (
+//       React.isValidElement(child) &&
+//       typeof child.type === "string" &&
+//       child.type === "a"
+//     ) {
+//       return React.cloneElement(child, { onClick: handleScroll });
+//     }
+//     return child;
+//   });
+// };
+// --- HINGGA SINI ---
 
 function App() {
   return (

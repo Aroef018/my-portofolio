@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Node Shop",
     description:
-      "Sebuah platform e-commerce responsif dengan fitur keranjang belanja dan pembayaran. Menggunakan arsitektur modular untuk skalabilitas yang lebih baik.",
+      "A responsive e-commerce platform featuring a shopping cart and payment integration. Built with a modular architecture for enhanced scalability.",
     imageUrl: project1Image,
     githubUrl: "https://github.com/Aroef018/E-com-with-Express",
     technologies: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express"],
@@ -25,7 +25,7 @@ const projects = [
   {
     title: "Apasi Chat",
     description:
-      "Aplikasi manajemen tugas sederhana dengan fitur CRUD (Create, Read, Update, Delete) dan persistensi data lokal. Dirancang dengan fokus pada pengalaman pengguna yang intuitif.",
+      "A simple Android-based instant messaging application, enabling real-time communication. Developed with a focus on intuitive user experience and efficient message handling.",
     imageUrl: project2Image,
     githubUrl: "https://github.com/AgengPraba/apasi-chat-app",
     technologies: ["Typescript", "Ionic", "Firebase", "SCSS"],
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "Tukutick",
     description:
-      "Portofolio pribadi ini dibangun menggunakan React dan Tailwind CSS untuk menampilkan skill dan proyek. Desain responsif dan modern.",
+      "A unique ticketing application featuring a pre-order system and a gacha-style lottery mechanism for ticket allocation. Designed to manage event ticket distribution with fairness and excitement.",
     imageUrl: project3Image,
     githubUrl: "https://github.com/HendraMaajid/tukutick",
     technologies: ["Laravel", "PHP", "MySQL", "Bootstrap"],
